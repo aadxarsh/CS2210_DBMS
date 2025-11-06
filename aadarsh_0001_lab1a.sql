@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS UniversityDB;
+USE UniversityDB;
+
+DROP TABLE IF EXISTS Students;
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Email VARCHAR(100)
+);
+ALTER TABLE Students ADD PhoneNumber VARCHAR(15);
+ALTER TABLE Students MODIFY FirstName VARCHAR(150);
+ALTER TABLE Students DROP COLUMN Email;
+DESC Students;
+
